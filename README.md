@@ -16,7 +16,7 @@
 - 浏览器端
 
    用最早的“共享session”的方式还是现在的“token”方式，身份标识到了浏览器端都要面临这样的一个问题：用户登录成功拿到token(或者是session-id)后怎么让浏览器存储和分享到其它域名下？同域名很简单，我们可以把token存在cookie里，把cookie的路径设置成顶级域名下，这样所有子域都能读取cookie中的token。这就是共享cookie的方式。
-##### 技术实现机制
+###### 技术实现机制
 ![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6.png)
 
 
