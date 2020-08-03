@@ -4,7 +4,7 @@
 ###### 单点登陆解决的问题：
 在企业发展初期，企业使用的系统很少，通常一个或者两个，每个系统都有自己的登录模块，运营人员每天用自己的账号登录，很方便。但随着企业的发展，用到的系统随之增多，运营人员在操作不同的系统时，需要多次登录，而且每个系统的账号都不一样，这对于运营人员来说，很不方便。于是，就想到是不是可以在一个系统登录，其他系统就不用登录了呢？这就是单点登录要解决的问题。
 ###### 单点登陆的实现方式：
-https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.png
+![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F.png)
 上图实现的是如何使用cookie进行单点登录， 客户端持有ID，服务端持有session，两者一起用来保持登录状态。客户端需要用ID来作为凭证，而服务端需要用session来验证ID的有效性。但是session这东西一开始是每个server自己独有的，豆瓣FM有自己的session、豆瓣读书有自己的session，而记录ID的cookie又是不能跨域的。所以，我们要实现一次登录一次退出，只需要想办法让各个server的共用一个session的信息，让客户端在各个域名下都能持有这个ID就好了。再进一步讲，只要各个server拿到同一个ID，都能有办法检验出ID的有效性、并且能得到ID对应的用户信息就行了，也就是能检验ID。
 ###### 实现方法
 - server端
@@ -17,9 +17,6 @@ https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20ima
    用最早的“共享session”的方式还是现在的“token”方式，身份标识到了浏览器端都要面临这样的一个问题：用户登录成功拿到token(或者是session-id)后怎么让浏览器存储和分享到其它域名下？同域名很简单，我们可以把token存在cookie里，把cookie的路径设置成顶级域名下，这样所有子域都能读取cookie中的token。这就是共享cookie的方式。
 ##### 技术实现机制
 ![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%8D%95%E7%82%B9%E7%99%BB%E9%99%86%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E6%9C%BA%E5%88%B6.png)
-
-
-
 
 
 
