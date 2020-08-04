@@ -38,10 +38,12 @@
 ###### 前后端分离是什么？为什么要前后端分离？
 就是把数据和页面分离开，后端不提供页面，只是纯粹的通过 Web API 来提供数据和业务交互能力，Web 前端就是纯粹的客户端角色，与 WinForm、移动终端应用属于同样的角色，可以把它们合在一起，统称为前端，分离开了后，后端不再考虑页面如何美化，前段也不需要了解后端采用的是什么样的技术实现方案，使得前后端的开发人员能够更加专注于自身业务的开发。
 ###### 一体式web与前后端分离架构对比
-![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%84%E6%9E%B6.jpg)
-以前的一体式 Web 架构示意
-![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E4%BB%A5%E5%89%8D%E7%9A%84%E4%B8%80%E4%BD%93%E5%BC%8F%E6%9E%84%E6%9E%B6.jpg)
-现在的前后端分离构架示意图
+
+以前的一体式 Web 架构示意：
+![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E4%B8%80%E4%BD%93%E5%BC%8F%E6%9E%B6%E6%9E%84.jpg)
+
+现在的前后端分离构架示意图：
+![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84.jpg)
 
 ###### 前后端分离主要技术切入点（重要）
 前后端分离后，会出现以前web一体式构架中没有出现过得问题，比如认证，会话机制，签名验证等，既然是做对外的api接口，当然安全问题是我们需要认真考虑的问题了，那么webapi会存在那些安全隐患呢？
@@ -53,7 +55,6 @@
 1. 做一个认证服务，提供一个认证的webapi，用户先访问它获取对应的token；
 1. 用户拿着相应的token以及请求的参数和服务器端提供的签名算法计算出签名后再去访问指定的api；
 1. 服务器端每次接收到请求就获取对应用户的token和请求参数，服务器端再次计算签名和客户端签名做对比，如果验证通过则正常访问相应的api，验证失败则返回具体的失败信息
-
 
 
 
