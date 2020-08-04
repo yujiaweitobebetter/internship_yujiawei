@@ -105,6 +105,22 @@ BPMN基本元素包括了这些元素，如下图所示：
 - 两种网关：排他网关（Exclusive）和并发网关（Parallel）；
 - 一种人工制造物：附注。 
 
+##### camnuda
+###### 官方文档：https://docs.camunda.org/manual/7.13/introduction/
+###### camunda简介
+Camunda是Activiti最大的贡献者之一(除Alfresco以外)，同时也是它一个主 要的执行咨询合作伙伴。camunda表示Activiti可能太拘束于Alfresco对以文档为中心的工作流的需求(这个也是BPMN约束使然)，而忽视了Activiti起步时 的更为普遍的BPM平台。camunda宣布他们正从Activiti 分裂出一个新的开源工程，那就是camunda BPM。
+
+Camunda BPM 是一个灵活的工作流和过程自动化框架，它的核心是一个在Java虚拟机内部运行的原生BPMN2.0流程引擎，因此它可以嵌入到任何Java应用程序或运行时容器中。
+
+Camunda是基于Java的框架，支持BPMN用于工作流和流程自动化，CMMN用于案例管理，DMN用于业务决策管理。
+
+###### camunda框架总览：
+
+![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/camunda%E6%A1%86%E6%9E%B6%E6%80%BB%E8%A7%88.jpg)
+
+###### camunda路程引擎架构：
+
+![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/camunda%E6%B5%81%E7%A8%8B%E5%BC%95%E6%93%8E%E6%9E%B6%E6%9E%84.jpg)
 
 
 ##### 容器
