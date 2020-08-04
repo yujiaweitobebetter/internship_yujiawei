@@ -40,9 +40,11 @@
 ###### 一体式web与前后端分离架构对比
 
 以前的一体式 Web 架构示意：
+
 ![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E4%B8%80%E4%BD%93%E5%BC%8F%E6%9E%B6%E6%9E%84.jpg)
 
 现在的前后端分离构架示意图：
+
 ![](https://github.com/yujiaweitobebetter/internship_yujiawei/blob/master/some%20image/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84.jpg)
 
 ###### 前后端分离主要技术切入点（重要）
